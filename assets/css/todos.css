@@ -1,0 +1,123 @@
+/*–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+Basic Style Sheet (for TodoListProject2)
+version: 1.0
+author: sean wang
+email: xiaotian.wang.7@gmail.com
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+body{
+	font-family: roboto;
+	background: #11998e;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1{
+	background: #2980b9;
+	color: white;
+	margin: 0;
+	padding: 10px 20px;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+.fa-edit{
+	float: right;
+}
+
+#container{
+	width: 500px;
+	margin: 100px auto;
+	background: #f7f7f7;
+	box-shadow: 0 0 3px rgba(0,0,0, 0.1);
+}
+
+/* =Add New Todo input styling
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/ 
+input{
+	font-size: 18px;
+	color: #2980b9;
+	background: #f7f7f7;
+	width: 100%;
+	padding: 13px 13px 13px 20px;
+	box-sizing: border-box;
+	border: none;
+}
+
+/*The styles when focusing on the input*/
+input:focus{
+	background: #fff;
+	border: 3px solid #2980b9;
+	outline: none;
+}
+
+/* =Todo item styling
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/ 
+
+ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+/*Make every other li background light gray*/
+li{
+	background: #fff;
+	height: 40px;
+	line-height: 40px;
+	color: #666;
+}
+
+li:nth-child(2n){
+	background: #f7f7f7;
+}
+
+/*style the trash bin so that it is hidden first*/
+/*and displayed when hovered over*/
+
+li span{
+	text-align: center;
+	color: white;
+	width: 0px;
+	display: inline-block;	
+	transition: 0.2s linear;
+	opacity: 0;
+}
+
+/*Trash bin icon*/
+li span:nth-child(1){
+	background: #e74c3c;
+}
+
+/*up arrow*/
+li span:nth-child(2){
+	background: #14ad40;
+}
+
+/*down arrow*/
+li span:nth-child(3){
+	background: #000000;
+	margin-right: 20px;
+}
+
+li:hover span{
+	width: 40px;
+	opacity: 1.0;
+}
+
+/* =completed Todo & Highlight Todo effect
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/ 
+
+.completed{
+	color: gray;
+	text-decoration: line-through;
+}
+
+.highlighted{
+	color: black;
+	font-weight: 700;
+	/*background: #eaa262;*/
+}
+
+
+
